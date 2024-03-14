@@ -4,7 +4,6 @@
  */
 package calculadora;
 import java.util.Scanner;
-
 /**
  *
  * @author Aluno CA
@@ -15,11 +14,18 @@ public class Calculadora {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        short num1, num2, operacao;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Digite o primeiro número:");
+        num1 = input.nextShort();
+        System.out.print("Digite o tipo de operação \n1.Adição \n2.Subtração \n3.Multiplicação \n4.Divisão");
+        operacao = input.nextShort();
+        if (operacao <= 4 && operacao >= 1){
+            
+        }
+        else{
+            System.out.println("Você não digitou um valor valido");
+            main(args);
+        }
     }
-    Scanner input = new Scanner(System.in);
-    int num1, num2;
-    num1 = input.nextInt();
-    
-    
 }
