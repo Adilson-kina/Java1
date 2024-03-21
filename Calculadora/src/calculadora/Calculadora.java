@@ -4,6 +4,7 @@
  */
 package calculadora;
 import java.util.Scanner;
+
 /**
  *
  * @author Aluno CA
@@ -16,15 +17,30 @@ public class Calculadora {
     public static void main(String[] args) {
         short num1, num2, operacao;
         Scanner input = new Scanner(System.in);
-        System.out.print("Digite o primeiro número:");
+        System.out.print("Digite o primeiro numero:");
         num1 = input.nextShort();
-        System.out.print("Digite o tipo de operação \n1.Adição \n2.Subtração \n3.Multiplicação \n4.Divisão");
+        System.out.print("Digite o tipo de operacao \n1.Adicao \n2.Subtracao \n3.Multiplicacao \n4.Divisao \n");
         operacao = input.nextShort();
         if (operacao <= 4 && operacao >= 1){
-            
+          System.out.print("Digite o segundo numero:");
+          num2 = input.nextShort();
+          switch(operacao){
+            case 1:
+              System.out.printf("A soma entre %d e %d e de %d", num1, num2, num1+num2);
+              break;
+            case 2:
+              System.out.printf("A subtracao entre %d e %d e de %d", num1, num2, num1-num2);
+              break;
+            case 3:
+              System.out.printf("A multiplicacao entre %d e %d e de %d", num1, num2, num1*num2);
+              break;
+            case 4:
+              System.out.printf("A divisao entre %d e %d e de %d", num1, num2, num1/num2);
+              break;
+          }
         }
         else{
-            System.out.println("Você não digitou um valor valido");
+            System.out.println("Voce nao digitou um valor valido");
             main(args);
         }
     }
